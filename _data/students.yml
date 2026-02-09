@@ -6,40 +6,40 @@ current:
 graduates:
   - name: Alekhya Rani Chunduri
     photo: alekhya-rani-chunduri.png
-    year: 2022
+    year: "2022"
     current: Visiting Scientist, Ohio State University
 
   - name: Anugata Lima
     photo: anugata-lima.jpg
-    year: 2023
+    year: "2023"
     current: Head, Dept of Botany, St. Anns College
 
   - name: Aparna Yerra
     photo: aparna-yerra.jpg
-    year: 2021
+    year: "2021"
     current: Assistant Professor, GIET University
 
   - name: Prashant Bavachikar
     photo: prashant-bavachikar.jpg
-    year: 2025
+    year: "2025"
     current: Research Assistant, KSSRDI Bangalore
 
   - name: Rashid Haroon
     photo: rashid-haroon.jpg
-    year: 2025
+    year: "2025"
     current: Project Associate, DBT Collaborative Project (GITAM & CMERTI)
 
   - name: Resma Rajan
     photo: resma-rajan.jpg
-    year: 2021
+    year: "2021"
     current: Manager, Sanzyme Biologics Pvt Ltd
 
   - name: Swarna Latha
     photo: swarna-latha.jpg
-    year: 2014
+    year: "2014"
     current: Scientist B, Andhra Medical College
 
   - name: Madhavi Prasad Kasa
     photo: madhavi-prasad-kasa.jpg
-    year: 2024
+    year: "2024"
     current: Assistant Professor, GIET University

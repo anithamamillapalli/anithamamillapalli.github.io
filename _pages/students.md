@@ -44,7 +44,8 @@ author_profile: true
 
 ## Graduated
 <div class="student-grid">
-{% for student in site.data.students.graduates %}
+{% assign graduates = site.data.students.graduates | sort: 'year' | reverse %}
+{% for student in graduates %}
   <div class="student-card">
     <img src="/images/students/{{ student.photo }}" alt="{{ student.name }}">
     <h3>{{ student.name }} ({{ student.year }})</h3>
