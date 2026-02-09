@@ -4,7 +4,7 @@ site_theme               : "dirt" # the available themes options are "default", 
 title                    : "Anitha Mamillapalli"
 title_separator          : "-"
 name                     : &name "Anitha Mamillapalli"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Anitha Mamillapalli's professional portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://anithamamillapalli.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "anithamamillapalli/anithamamillapalli.github.io"
