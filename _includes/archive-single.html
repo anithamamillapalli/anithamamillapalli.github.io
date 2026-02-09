@@ -1,0 +1,61 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+
+    {% if post.category == "manuscripts" %}
+      <h3 itemprop="headline">
+        {{ title }}
+        <a class="archive__item-title" href="{{ post.paperurl }}" rel="permalink noopener noreferrer" target="_blank">
+          <i class="fa fa-link" aria-hidden="true" title="permalink"></i>
+          <span class="sr-only">Permalink</span>
+        </a>
+      </h3>
+
+      <p style="font-size: medium;">
+        Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}
+      </p>
+
+    {% elsif post.category == "databases" %}
+      <h3 itemprop="headline">
+        {{ title }}
+      </h3>
+
+      <p style="font-size: medium;">
+        Access using: {{ post.venue }}, {{ post.date | default: "1900-01-01" | date: "%Y" }}
+      </p>
+
+    {% elsif post.category == "conferences" %}
+      <h3 itemprop="headline">
+        {{ title }}
+      </h3>
+
+      <p style="font-size: medium;">
+        {{ post.type }} at {{ post.venue }} on {{ post.date | default: "1900-01-01" | date: "%Y" }}.
+      </p>
+    {% endif %}
+  </article>
+</div>
